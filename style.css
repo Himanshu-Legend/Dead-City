@@ -1,0 +1,516 @@
+*{
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* general styles */
+
+#speciop{
+    margin-bottom: 70px;
+}
+
+.hr01{
+    width: 350px;
+    height: 3px;
+    background-color: #fc0000;
+    border: 0;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    margin-top: 40px;
+}
+
+
+.creeptxt{
+    font-weight: bold;
+    color: #fc0000; font-size: 25px;
+    text-transform: uppercase;
+}
+
+li{
+    list-style: none;
+}
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+}
+
+
+
+.navbar{
+    width: 85%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+}
+
+
+.button{
+    outline: none;
+    background: transparent;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    padding: 10px 25px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.button:hover {
+    filter: drop-shadow(0 0 25px #f50000);
+    transition: .5s ease-in-out;
+    border: 2px solid #ff0000;
+    color: red;
+}
+
+.redhov{
+    animation-name: redhovvout;
+    animation-duration: 1s;
+}
+
+.redhov:hover{
+    animation-name: redhovvin;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+}
+ 
+.icohov{
+    animation-name: reverse;
+    animation-duration: 1s;
+
+}
+
+.icohov:hover{
+    animation-name: myanimation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes myanimation {
+    from {
+        transform: rotate(0deg) scale(1);
+        border-radius: 0px;
+    }
+    to {
+        border-radius: 100px;
+        transform: rotate(360deg) scale(1.5);
+        filter: drop-shadow(0 0 25px red);
+    }
+}
+
+@keyframes reverse {
+    from {
+        border-radius: 100px;
+        transform: rotate(360deg) scale(1.5);
+        filter: drop-shadow(0 0 25px red);
+    }
+    to {
+        border-radius: 0px;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+
+@keyframes redhovvin{
+    from{
+        color: white;
+    }
+    to{
+        color: red;
+        filter: drop-shadow(0 0 100px #f50000);
+    }
+}
+
+
+@keyframes redhovvout{
+    from{
+        color: red;
+        filter: drop-shadow(0 0 100px #f50000);
+    }
+    to{
+        color: white;
+    }
+}
+
+
+
+/* content */
+.content{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(assets/backgrounds/back02.webp);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+
+.main{
+    color: #fbfcfd;
+    left: 8%;
+    transform: translateY(-50%);
+    top: 50%;
+    position: absolute;
+    z-index: 2;
+
+}
+
+
+
+
+.main h1{
+    font-size: 100px;
+    font-weight: bold;
+    font-family: water brush;
+    margin: 10px 0 3;
+
+}
+
+.main small{
+    font-size: 25px;
+}
+
+.main02{
+    color: #fbfcfd;
+    left: 8%;
+    transform: translateY(-50%);
+    top: 98%;
+    position: absolute;
+    z-index: 2;
+   
+}
+
+
+
+@media(max-width: 400px){
+    .main h1{
+        font-size: 50px;
+    }
+    .main small{
+        font-size: 15px;
+    }
+}
+
+
+
+@media(max-width:300px){
+    .main h1{
+        font-size: 36px;
+    }
+    .main small{
+        font-size: 15px;
+    }
+    .button{
+        padding: 2px 5px;
+        font-size: 10px;
+    }
+}
+
+
+
+
+.social-links{
+  letter-spacing: 5px;
+}
+
+
+
+
+.menu{
+    width: 20px;
+}
+
+
+.main02 img{
+    width: 30px;
+    cursor: pointer;
+}
+
+/* .main02 img:hover{
+    transition: .5s;
+    filter: drop-shadow(0 0 10px  #fff);
+} */
+
+
+
+/* content2 */
+
+.content2{
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section:not(.hero):nth-child(even) {
+	background-color: #f5f5f5;
+}
+.content2 h3{
+    font-size: 60px;
+    text-align: center;
+    color: #e63f3f;
+    font-weight: bolder;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    font-family: water brush;
+}
+
+.content2 p{
+    text-align: center;
+    font-weight: bold;
+    font-family: raleway;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+
+
+
+.grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content2 .grid li {
+	height: 350px;
+	padding: 20px;
+	background-clip: content-box;
+	background-size: cover;
+	background-position: center;
+}
+
+.content2 .grid li.small {
+	flex-basis: 30%;
+}
+
+.content2 .grid li.large {
+	flex-basis: 70%;
+}
+
+@media (max-width: 1100px) {
+	.content2 .grid li.small,
+	.content2 .grid li.large {
+		flex-basis: 50%;
+	}
+}
+
+@media (max-width: 800px) {
+	.content2 .grid li.small,
+	.content2 .grid li.large {
+		flex-basis: 100%;
+	}
+}
+
+
+/* redhovin animation effect */
+
+
+@keyframes redhovin{
+    from{
+        color: #e63f3f;
+    }
+    to{
+        filter: drop-shadow(0 0 100px #f50000);
+    }
+}
+@keyframes redhovinn{
+    from{
+        color: #e63f3f;
+    }
+    to{
+        filter: drop-shadow(0 0 40px #f50000);
+    }
+}
+
+
+@keyframes redhovout{
+    from{
+        filter: drop-shadow(0 0 40px #f50000);
+    }
+    to{
+        filter: drop-shadow(0 0 40px #ffffff);
+ }
+}
+
+
+.content2 .grid li:hover{
+    animation-name: redhovinn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.content2 .grid li{
+    animation-name: redhovout;
+    animation-duration: 1s;
+}
+
+.redhovin{
+    animation-name: redhovout;
+    animation-duration: 1s;
+}
+
+.redhov2:hover{
+    animation-name: redhovin;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+
+/* content 03 */
+
+.content03{
+    background-image: url(assets/backgrounds/final.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* content04 */
+
+.content04{
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.content04 h3{
+    font-size: 60px;
+    text-align: center;
+    color: #e63f3f;
+    font-weight: bolder;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    font-family: water brush;
+}
+
+.content04 p{
+    text-align: center;
+    font-weight: bold;
+    font-family: raleway;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+
+/* ending */
+
+
+.ending{
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.ending h3{
+    font-size: 60px;
+    text-align: center;
+    color: #e63f3f;
+    font-weight: bolder;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    font-family: water brush;
+}
+
+.ending p{
+    text-align: center;
+    font-weight: bold;
+    font-family: raleway;
+    font-size: 18px;
+    line-height: 35px;
+
+}
+
+
+.ending form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 60%;
+}
+
+.ending form .btn {
+	padding: 18px 42px;
+    background-color: #e63f3f;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.ending form input {
+	padding: 15px;
+	margin-right: 30px;
+	font-size: 18px;
+	color: #555;
+	flex: 1;
+    outline: none;
+}
+
+@media (max-width: 1000px) {
+	.ending form input {
+		flex-basis: 100%;
+		margin: 0 0 20px 0;
+	}
+}
+
+
+
+/*Footer Section*/
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #e63f3f;
+	color: #fff;
+	padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer ul {
+	display: flex;
+}
+
+footer ul li {
+	margin-left: 16px;
+}
+
+footer p {
+	text-transform: uppercase;
+	font-size: 14px;
+	opacity: 0.6;
+	align-self: center;
+}
+
+@media (max-width: 1100px) {
+	footer {
+		flex-direction: column;
+	}
+
+	footer p {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	footer ul li {
+		margin: 0 8px;
+	}
+} 
